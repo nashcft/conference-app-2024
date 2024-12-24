@@ -43,7 +43,7 @@ public class DefaultSessionsApiClient internal constructor(
     ktorfit: Ktorfit,
 ) : SessionsApiClient {
 
-    private val sessionApi = ktorfit.create<SessionApi>()
+    private val sessionApi = ktorfit.createSessionApi()
 
     override suspend fun sessionsAllResponse(): SessionsAllResponse {
         return networkService {

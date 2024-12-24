@@ -24,7 +24,7 @@ public class DefaultStaffApiClient(
     ktorfit: Ktorfit,
 ) : StaffApiClient {
 
-    private val staffApi = ktorfit.create<StaffApi>()
+    private val staffApi = ktorfit.createStaffApi()
 
     public override suspend fun getStaff(): PersistentList<Staff> {
         return networkService {

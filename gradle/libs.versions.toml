@@ -3,7 +3,7 @@ androidGradlePlugin = "8.5.2"
 # For updating Kotlin and Compose Compiler version, see:
 # https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-compatibility-and-versioning.html#jetpack-compose-and-compose-multiplatform-release-cycles
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin?#pre-release_kotlin_compatibility
-kotlin = "2.0.10"
+kotlin = "2.1.0"
 
 androidxCore = "1.13.1"
 androidDesugarJdkLibs = "2.0.4"
@@ -23,18 +23,18 @@ accompanist = "0.30.1"
 junit = "4.13.2"
 androidxTestExt = "1.2.1"
 androidxTestEspresso = "3.6.1"
-dagger = "2.51.1"
+dagger = "2.54"
 koin = "3.4.3"
 ktlint = "0.49.1"
 kotlinxSerialization = "1.7.1"
 ktor = "2.3.10"
 roborazzi = "1.26.0"
-ksp = "2.0.10-1.0.24"
+ksp = "2.1.0-1.0.29"
 firebaseBom = "33.1.2"
 multiplatformFirebase = "1.8.1"
 kermit = "1.2.2"
 okHttp = "4.12.0"
-ktorfit = "1.12.0"
+ktorfit = "2.2.0"
 ossLicensesPlugin = "0.10.6"
 ossLicenses = "17.1.0"
 haze = "0.7.2"
@@ -44,10 +44,11 @@ lottie = "6.1.0"
 molecule = "1.4.2"
 kover = "0.7.6"
 androidxLifecycleProcess = "2.8.4"
-skie = "0.8.4"
+skie = "0.9.5"
 composablePreviewScanner = "0.3.0"
 coil = "3.0.0-alpha10"
 peekaboo = "0.5.2"
+coreKtx = "1.15.0"
 
 [libraries]
 androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -58,7 +59,7 @@ hiltGradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-pl
 roborazziGradlePlugin = { group = "io.github.takahirom.roborazzi", name = "roborazzi-gradle-plugin", version.ref = "roborazzi" }
 kspGradlePlugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 firebaseGradlePlugin = { module = "com.google.gms:google-services", version = "4.4.2" }
-ktorfitGradlePlugin = { module = "de.jensklingenberg.ktorfit:gradle-plugin", version = "1.0.0" }
+ktorfitGradlePlugin = { module = "de.jensklingenberg.ktorfit:ktorfit-gradle-plugin", version = "2.2.0" }
 kotlinxSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 completeKotlinPlugin = { module = "com.louiscad.complete-kotlin:plugin", version = "1.1.0" }
 detektGradlePlugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
@@ -162,7 +163,6 @@ firebaseCrashlyticsGradlePlugin = { module = "com.google.firebase:firebase-crash
 firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx", version = "19.0.3" }
 
 ktorfitLib = { module = "de.jensklingenberg.ktorfit:ktorfit-lib", version.ref = "ktorfit" }
-ktorfitKsp = { module = "de.jensklingenberg.ktorfit:ktorfit-ksp", version.ref = "ktorfit" }
 
 # Debug
 
@@ -182,6 +182,7 @@ roborazziRule = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule",
 roborazziPreviewScannerSupport = { module = "io.github.takahirom.roborazzi:roborazzi-compose-preview-scanner-support", version.ref = "roborazzi" }
 composablePreviewScanner = { module = "com.github.sergio-sastre.ComposablePreviewScanner:android", version.ref = "composablePreviewScanner" }
 composablePreviewScannerJvm = { module = "com.github.sergio-sastre.ComposablePreviewScanner:jvm", version.ref = "composablePreviewScanner" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 
 [plugins]
 androidGradlePlugin = { id = "com.android.application", version.ref = "androidGradlePlugin" }

@@ -25,7 +25,7 @@ public class DefaultSponsorsApiClient(
     ktorfit: Ktorfit,
 ) : SponsorsApiClient {
 
-    private val sponsorApi = ktorfit.create<SponsorApi>()
+    private val sponsorApi = ktorfit.createSponsorApi()
     public override suspend fun sponsors(): PersistentList<Sponsor> {
         return networkService {
             sponsorApi.getSponsors()

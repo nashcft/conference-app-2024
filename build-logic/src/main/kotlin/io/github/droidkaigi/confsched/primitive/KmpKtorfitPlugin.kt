@@ -19,10 +19,6 @@ class KmpKtorfitPlugin : Plugin<Project> {
                 apply("de.jensklingenberg.ktorfit")
             }
 
-            configure<de.jensklingenberg.ktorfit.gradle.KtorfitGradleConfiguration> {
-                version = libs.library("ktorfitKsp").versionConstraint.requiredVersion
-            }
-
             kotlin {
                 sourceSets["commonMain"].apply {
                     dependencies {
@@ -45,9 +41,6 @@ class KmpKtorfitPlugin : Plugin<Project> {
                         "IosX64",
                         "IosSimulatorArm64",
                     )
-                }
-                (listOf("CommonMainMetadata", "Android") + iosConfigs).forEach {
-                    add("ksp$it", libs.library("ktorfitKsp"))
                 }
             }
         }

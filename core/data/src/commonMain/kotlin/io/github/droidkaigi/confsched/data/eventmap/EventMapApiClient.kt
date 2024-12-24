@@ -26,7 +26,7 @@ public class DefaultEventMapApiClient(
     ktorfit: Ktorfit,
 ) : EventMapApiClient {
 
-    private val eventMapApi = ktorfit.create<EventMapApi>()
+    private val eventMapApi = ktorfit.createEventMapApi()
 
     public override suspend fun eventMapEvents(): PersistentList<EventMapEvent> {
         return networkService {

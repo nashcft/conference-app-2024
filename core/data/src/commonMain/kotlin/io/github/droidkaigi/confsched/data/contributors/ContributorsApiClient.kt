@@ -18,7 +18,7 @@ public class DefaultContributorsApiClient(
     ktorfit: Ktorfit,
 ) : ContributorsApiClient {
 
-    private val contributorApi = ktorfit.create<ContributorApi>()
+    private val contributorApi = ktorfit.createContributorApi()
     public override suspend fun contributors(): PersistentList<Contributor> {
         return networkService {
             contributorApi.getContributors()
